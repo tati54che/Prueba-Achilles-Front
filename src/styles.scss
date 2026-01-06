@@ -1,0 +1,116 @@
+/* You can add global styles to this file, and also import other style files */
+/* Layout general */
+:host {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding: 16px;
+  gap: 16px;
+  box-sizing: border-box;
+  //font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+}
+
+body
+{
+   font-family: "Google Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 100;
+  font-style: normal;
+}
+/* NAV */
+nav {
+  display: flex;
+  flex-wrap: wrap;          /* si no entra, baja */
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+
+  padding: 12px 14px;
+  border-radius: 12px;
+
+  background: #007575;      /* oscuro */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+/* Links del menú */
+nav a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 10px 12px;
+  border-radius: 10px;
+
+  color: #e5e7eb;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1;
+
+  transition: transform 120ms ease, background 120ms ease, color 120ms ease;
+}
+
+/* Hover */
+nav a:hover {
+  background: rgba(255, 255, 255, 0.10);
+  transform: translateY(-1px);
+}
+
+/* Estado activo por routerLinkActive="active" */
+nav a.active {
+  background: #ffffff;
+  color: #111827;
+}
+
+/* MAIN */
+main {
+  flex: 1;                  /* ocupa el resto de altura */
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  padding: 16px;
+  border-radius: 12px;
+
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+}
+
+/* Responsive: en pantallas pequeñas, que el menú se vea cómodo */
+@media (max-width: 520px) {
+  :host {
+    padding: 12px;
+  }
+
+  nav {
+    padding: 10px;
+    gap: 8px;
+  }
+
+  nav a {
+    padding: 9px 10px;
+    font-size: 13px;
+  }
+}
+
+.btn-global {
+  padding: 8px;
+  background-color: #ffffff;
+  color: #000000;
+  border: 1px solid #000000;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.font-weight
+{
+  font-weight: bold;
+}
+
+.container-user
+{
+  padding: 10px 0px;
+}
+.container-user span.font-weight + span {
+  margin-top: 10px;
+}

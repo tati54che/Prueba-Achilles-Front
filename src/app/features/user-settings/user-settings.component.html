@@ -1,0 +1,19 @@
+
+<p class="text-align-justify">1. ¿Cómo ejecutarías una función en el componente “user-info” cada vez que la variable
+“detailView” cambie dentro del componente “user-settings”?
+Consideraciones:
+1. detailView será un objeto que tendrá los siguientes campos.
+a. Name, tipo texto.
+b. Age, tipo numérico.
+2. Se requiere ejecutar una función en un componente hijo cada vez que el input que
+viene del padre cambie. </p>
+<p>2. Utilizando los componentes implementados en el ejercicio 1, crear una función en el
+componente hijo para incrementar la edad de un usuario. Mostrar la nueva edad en el
+componente padre mediante un console.log</p>
+
+<button class="btn-global" (click)="cambiarUsuario()">Cambiar Usuario</button>
+
+<app-user-info
+  [userInfo]="detailView"
+  (edadActualizada)="actualizarEdadUsuario($event)">
+</app-user-info>

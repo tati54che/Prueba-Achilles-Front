@@ -1,0 +1,21 @@
+
+<p>1. Realizar petición a https://6390b47b65ff4183111c4b91.mockapi.io/users/users para
+obtener los usuarios.
+</p>
+<p>2. Utilizar directivas estructurales de Angular para mostrar el nombre de cada personaje y si es
+mayor de edad.</p>
+
+<ol>
+  @for (u of users; track u.name) {
+    <li>
+      {{ u.name }} tiene
+       {{ u.age }}
+       <span> --&gt; </span>
+      @if (esMayor(u)) {
+        <span>Es mayor de edad</span>
+      } @else {
+        <span>Es menor de edad</span>
+      }
+    </li>
+  }
+</ol>

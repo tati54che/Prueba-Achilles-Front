@@ -1,0 +1,21 @@
+.contenedor {
+  display: flex;
+  flex-direction: column;
+}
+
+.primero {
+  order: 2;
+
+}
+
+.segundo {
+  order: 1;
+
+}
+
+.general
+{
+  height: 100px;
+  border: 2px solid #5896;
+  width: 200px;
+}

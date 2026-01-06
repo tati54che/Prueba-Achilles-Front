@@ -1,0 +1,43 @@
+<p>
+  1. Tenemos dos endpoints distintos para obtener datos:
+  <br>
+  • https://646b8fc77d3c1cae4ce3ffe0.mockapi.io/commonapi/users
+  <br>
+  • https://646b8fc77d3c1cae4ce3ffe0.mockapi.io/commonapi/cities
+  <br>
+  ¿Cómo lo tenemos que hacer, con RxJS, para obtener los datos de ambos endpoints al mismo tiempo?
+</p>
+
+<p>
+  2. En el caso de que necesitemos primero obtener el id de usuario para luego enviar una
+  consulta al endpoint de cities para obtener las ciudades por id de usuario,
+  ¿cómo lo implementarías para primero llamar a una API y luego a otra con el resultado
+  de la primera?
+  <br>
+  (Asumir que todos los usuarios viven en Belgium)
+</p>
+
+<hr>
+
+<h3>Paralelo</h3>
+
+<button
+  class="btn-global"
+  (click)="cargarParalelo()"
+>
+  Cargar usuarios y ciudades en consola
+</button>
+
+
+<hr>
+
+<h3>SECUENCIAL</h3>
+
+<button
+  class="btn-global"
+  (click)="cargarSecuencial()"
+>
+  Cargar ciudades del usuario (Belgium) en consola
+</button>
+
+
